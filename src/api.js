@@ -21,8 +21,13 @@ const getNewsData = () => {
 router.get("/", (req, res) => {
   console.log("in api call");
   const d = getNewsData();
+  console.log(d);
   console.log("done");
-  res.json(d);
+  // res.json(d);
+
+  res.json({
+    hello: "hgggggi!",
+  });
 });
 
 app.use(`/.netlify/functions/api`, router);
